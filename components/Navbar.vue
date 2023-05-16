@@ -137,14 +137,14 @@
   }
 
   li a {
-    color: rgb(253, 244, 244);
+    color: white ;
     font-weight: bold;
     font-size: 2rem;
     letter-spacing: 1px;
+    z-index: 9999;
   }
 
   .user-btns {
-    /* border: 1px solid red; */
     display: flex;
     flex-direction: column;
     align-items: center;
