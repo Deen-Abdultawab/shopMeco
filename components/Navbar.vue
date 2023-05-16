@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="nav">
     <nav class="mobile-navBar">
         <div class="logo">
             <img src="../assets/images/Mask group.png" alt="">
@@ -47,6 +47,10 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+  }
+
+  .nav {
+    z-index: 99999;
   }
   .mobile-navBar {
       display: flex;
@@ -141,7 +145,6 @@
     font-weight: bold;
     font-size: 2rem;
     letter-spacing: 1px;
-    z-index: 9999;
   }
 
   .user-btns {
