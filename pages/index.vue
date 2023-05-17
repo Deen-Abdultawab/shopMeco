@@ -201,6 +201,7 @@ export default {
   @media only screen and (max-width: 900px) {
     header {
       background: url(../assets/images/bg2.png);
+      max-height: 700px;
     }
     .main-container {
       padding: 0 50px;

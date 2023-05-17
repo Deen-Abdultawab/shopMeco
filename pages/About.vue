@@ -197,7 +197,7 @@ export default {
 
     header {
       background: url(../assets/images/bg2.png);
-      height: 900px;
+      height: 700px;
       margin-bottom: 200px;
     }
     .mobile-nav {
