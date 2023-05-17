@@ -138,6 +138,15 @@ export default {
     padding-top: 2rem;
   }
 
+  h1{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 3.5rem;
+    line-height: 53px;
+    color: #FFFFFF;
+  }
+
   .overlay1, .overlay2 {
     position: absolute;
     max-width: 100%;
@@ -159,15 +168,6 @@ export default {
     right: 0;
     top: 13rem;
     left: -1.3rem;
-  }
-
-  h1{
-    font-family: 'Inter';
-    font-style: normal;
-    font-weight: 600;
-    font-size: 3.5rem;
-    line-height: 53px;
-    color: #FFFFFF;
   }
 
   .body p{
@@ -201,7 +201,6 @@ export default {
   @media only screen and (max-width: 900px) {
     header {
       background: url(../assets/images/bg2.png);
-      max-height: 700px;
     }
     .main-container {
       padding: 0 50px;
@@ -240,9 +239,13 @@ export default {
 
     @media only screen and (max-width: 600px) {
 
-    h1 {
-        font-size: 40px;
+     .index-article h1 {
+        font-size: 2.5rem;
         line-height: 50px;
+    }
+
+     .index-article p{
+      font-size: 1.5rem;
     }
 
     .body {

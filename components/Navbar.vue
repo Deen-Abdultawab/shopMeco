@@ -52,6 +52,10 @@
   .nav {
     z-index: 99999;
   }
+
+  .logo {
+    width: 200px;
+  }
   .mobile-navBar {
       display: flex;
       justify-content: space-between;
@@ -195,4 +199,14 @@
   .show .hamburger-bottom{
       transform: rotate(-45deg) translateX(6px) translateY(6px);
   }
+
+@media only screen and (max-width: 600px){
+  .logo {
+    width: 150px;
+  }
+
+  .hamburger {
+    width: 25px;
+  }
+}
 </style>

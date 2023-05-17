@@ -1,6 +1,7 @@
 <template>
-    <div class="container">
+  <div>
       <Navbar class="mobile-nav"/>
+    <div class="container">
       <div class="left-col">
         <div class="logo">
           <a href="/"><img src="../assets/images/Mask group.png" alt=""></a>
@@ -231,6 +232,7 @@
       </div>
         <!-- end of service info  -->
     </div>
+  </div>
 </template>
 
 <script>

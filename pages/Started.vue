@@ -1,6 +1,7 @@
 <template>
-    <div class="container">
+  <div>
     <Navbar class="mobile-nav"/>
+    <div class="container">
 
     <div class="left-col">
       <div class="logo">
@@ -55,6 +56,7 @@
         
       </div>
     </div>
+  </div>
   </div>
 </template>
 

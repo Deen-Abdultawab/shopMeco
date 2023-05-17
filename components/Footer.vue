@@ -8,10 +8,10 @@
             </p>
 
             <div class="social-links" style="display: flex; justify-content: space-between; width: 150px; margin-top: 40px">
-                <img src="../assets/images/Path (1).png" alt="">
-                <img src="../assets/images/Shape.png" alt="">
-                <img src="../assets/images/Path.png" alt="">
-                <img src="../assets/images/Shape (1).png" alt="">
+                <img src="../assets/images/Path (1).png" alt="" class="social">
+                <img src="../assets/images/Shape.png" alt="" class="social">
+                <img src="../assets/images/Path.png" alt="" class="social">
+                <img src="../assets/images/Shape (1).png" alt="" class="social">
             </div>
         </div>
 
@@ -121,10 +121,26 @@ export default {
     }
     input{
         border-radius: 30px;
+        border: 1px solid #B5B5B5;
         background: #FFFFFF;
         height: 40px;
         padding-left: 20px;
         width: 100%;
+        transition: all 0.3s linear;
+        color: #26046A;
+    }
+
+    input:hover {
+        border-color: #865203;
+    }
+
+    input:focus {
+         outline: none;
+        border-color: #865203;
+    }
+
+    .social:hover {
+        cursor: pointer;
     }
 
  @media only screen and (max-width: 900px) {

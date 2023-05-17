@@ -257,8 +257,7 @@ form button{
     header {
        background: url(../assets/images/bg2.png);
        background-size: cover;
-        background-repeat: no-repeat;
-       min-height: 700px;
+      background-repeat: no-repeat;
     }
 
     .mobile-nav {
