@@ -40,8 +40,8 @@
     }
 
     a {
-        color: white !important;
         transition: all 0.3s linear;
+        color: #fff !important;
     }
 
     a:hover, .btn:hover{
