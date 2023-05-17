@@ -41,8 +41,8 @@
           <div class="form-input">
             <label for="name">Password</label> <br>
             <div class="password-field">
-              <input type="password" placeholder="Enter password" required>
-            <button class="placeholder-span">Show</button>
+              <input type="password" placeholder="Enter Password" required>
+              <button class="placeholder-span">Show</button>
             </div>
             <div class="formy">
               <div>
@@ -210,7 +210,7 @@ export default {
     font-size: 20px;
     line-height: 31px;
     color: #7C7C7C;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
   }
 
   .form-input > input, .password-field > input{
@@ -218,7 +218,7 @@ export default {
     box-sizing: border-box;
     border-radius: 10px;
     width: 100%;
-    padding: 15px 30px;
+    padding: 15px 10px;
     font-family: 'Sofia Pro';
     font-style: normal;
     font-weight: 500;
@@ -235,14 +235,20 @@ export default {
     border: 1px solid #5007E0;
   }
 
+  input::placeholder{
+    font-size: 15px;
+    letter-spacing: 1.2;
+  }
+
   .placeholder-span {
     position: absolute;
-    left: 85%;
+    right: 12px;
     top: 50%;
     transform: translateY( -50%);
     font-size: 15px;
     color: #5007E0;
     cursor: pointer;
+    height: 17px;
   }
 
    .formy{

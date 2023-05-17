@@ -64,12 +64,12 @@
 
                 <div class="formy">
                   <div>
-                      <input type="checkbox" name="" id="" class="checkbox"> <span>I agree to <a href="#">terms & conditions</a>
-                        </span> 
+                      <input type="checkbox" name="" id="" class="checkbox"> 
+                      <span >I agree to <a href="#" class="terms">terms & conditions</a></span> 
                   </div>
 
                   <div>
-                    <a href="/">Forget Password?</a>
+                    <a href="/" class="forget-password">Forget Password?</a>
                   </div>
                 </div>
               </div>    
@@ -423,13 +423,14 @@ export default {
 
   label span {
     color: red;
+    display: none;
   }
 
   .form-input > input, .password-field > input, select, textarea{
     border: 1px solid #7C7C7C;
     border-radius: 10px;
     width: 100%;
-    padding: 15px 30px;
+    padding: 15px 10px;
     margin-top: 8px;
     font-family: 'Sofia Pro';
     font-style: normal;
@@ -459,6 +460,17 @@ export default {
     font-size: 15px;
     color: #5007E0;
     cursor: pointer;
+    height: 17px;
+
+  }
+
+  input::placeholder{
+    font-size: 15px;
+    letter-spacing: 1.2;
+  }
+
+   .formy .forget-password {
+    font-size: 12px;
   }
 
    .formy{
@@ -618,6 +630,12 @@ export default {
     font-size: 13px;
   }
   }
+
+   @media only screen and (max-width: 480px){
+    .terms {
+    display: block;
+  }
+}
 
 
 

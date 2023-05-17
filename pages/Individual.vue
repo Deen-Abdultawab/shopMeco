@@ -59,17 +59,17 @@
                 <br>
                 <div class="password-field">
                   <input type="password" placeholder="Enter password" id="password" required>
-                <button class="placeholder-span">Show</button>
+                  <button class="placeholder-span">Show</button>
                 </div>
 
                 <div class="formy">
                   <div>
-                      <input type="checkbox" name="" id="" class="checkbox"> <span>I agree to <a href="#">terms & conditions</a>
-                        </span> 
+                      <input type="checkbox" name="" id="" class="checkbox"> 
+                      <span >I agree to <a href="#" class="terms">terms & conditions</a></span> 
                   </div>
 
                   <div>
-                    <a href="/">Forget Password?</a>
+                    <a href="/" class="forget-password">Forget Password?</a>
                   </div>
                 </div>
               </div>    
@@ -442,26 +442,33 @@ export default {
     position: relative;
   }
 
+  input::placeholder{
+    font-size: 15px;
+    letter-spacing: 1.2;
+    /* border: 1px solid red; */
+  }
+
   label{
     font-family: 'Sofia Pro';
     font-style: normal;
     font-weight: 400;
     font-size: 20px;
-    line-height: 31px;
+    /* line-height: 31px; */
     color: #7C7C7C;
-    /* padding-bottom: 20px; */
+    
   }
 
   label span {
     color: red;
+    display: none;
   }
 
   .form-input > input, .password-field > input, select, textarea{
     border: 1px solid #7C7C7C;
     border-radius: 10px;
     width: 100%;
-    padding: 15px 30px;
-    margin-top: 8px;
+    padding: 15px 10px;
+    margin-top: 2px;
     font-family: 'Sofia Pro';
     font-style: normal;
     font-weight: 500;
@@ -484,12 +491,14 @@ export default {
 
   .placeholder-span {
     position: absolute;
-    left: 85%;
+    right: 12px;
     top: 50%;
     transform: translateY( -50%);
     font-size: 15px;
     color: #5007E0;
     cursor: pointer;
+    /* border: 1px solid green; */
+    height: 17px;
   }
 
    .formy{
@@ -500,6 +509,10 @@ export default {
 
   .formy div:last-child {
     text-align: right;
+  }
+
+  .formy .forget-password {
+    font-size: 12px;
   }
 
   .checkbox {
@@ -637,6 +650,16 @@ export default {
 
     .formy span {
     font-size: 13px;
+  }
+
+  
+
+
+  }
+
+  @media only screen and (max-width: 480px){
+    .terms {
+    display: block;
   }
   }
 
