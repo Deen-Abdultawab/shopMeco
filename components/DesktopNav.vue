@@ -40,7 +40,7 @@
     }
 
     a {
-        color: white;
+        color: white !important;
         transition: all 0.3s linear;
     }
 
