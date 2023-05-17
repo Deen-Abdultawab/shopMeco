@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-  <navbar class="mobile-nav"/>
+  <Navbar class="mobile-nav"/>
 
     <div class="left-col">
       <div class="logo">
@@ -72,6 +72,15 @@
     </div>
   </div>
 </template>
+
+<script>
+import Navbar from '~/components/Navbar.vue';
+
+export default {
+  components: { Navbar }
+}
+
+</script>
 
 <style scoped>
 

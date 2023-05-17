@@ -36,6 +36,7 @@
         justify-content: space-between;
         align-items: center;
         padding: 1.5rem 2rem;
+        z-index: 9999;
     }
 
     a {

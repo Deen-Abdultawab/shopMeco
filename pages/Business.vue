@@ -1,6 +1,6 @@
 <template>
     <div class="container">
-      <navbar class="mobile-nav"/>
+      <Navbar class="mobile-nav"/>
       <div class="left-col">
         <div class="logo">
           <a href="/"><img src="../assets/images/Mask group.png" alt=""></a>
@@ -232,6 +232,14 @@
         <!-- end of service info  -->
     </div>
 </template>
+
+<script>
+import Navbar from '~/components/Navbar.vue';
+
+export default {
+  components: { Navbar }
+}
+</script>
 
 <style scoped>
 

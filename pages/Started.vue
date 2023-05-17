@@ -1,6 +1,6 @@
 <template>
     <div class="container">
-    <navbar class="mobile-nav"/>
+    <Navbar class="mobile-nav"/>
 
     <div class="left-col">
       <div class="logo">
@@ -57,6 +57,15 @@
     </div>
   </div>
 </template>
+
+<script>
+import Navbar from '~/components/Navbar.vue';
+
+export default {
+  components: { Navbar }
+}
+
+</script>
 
 <style scoped>
 @import url('https://fonts.googleapis.com/css2?family=Fruktur&family=Inter:wght@100;200;300;400;600;700;800&family=Licorice&display=swap');

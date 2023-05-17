@@ -4,7 +4,7 @@
    <div class="daddy">
      <header>
        <div class="navbars">
-         <navbar class="mobile-nav"/>
+        <Navbar class="mobile-nav"/>
         <DesktopNav />
     </div>
 
@@ -50,9 +50,10 @@
 <script>
 import HomeCarousel from "~/components/HomeCarousel.vue";
 import DesktopNav from "~/components/DesktopNav.vue";
+import Navbar from "~/components/Navbar.vue";
 
 export default {
-    components: { HomeCarousel, DesktopNav }
+    components: { HomeCarousel, DesktopNav, Navbar }
 }
 </script>
 

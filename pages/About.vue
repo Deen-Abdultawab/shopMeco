@@ -2,7 +2,7 @@
  <div>
   <header>
     <div class="navbars">
-      <navbar class="mobile-nav"/>
+      <Navbar class="mobile-nav"/>
       <DesktopNav />
     </div>
     <div class="main-container">
@@ -42,9 +42,10 @@
 
 <script>
 import DesktopNav from '~/components/DesktopNav.vue';
+import Navbar from '@/components/Navbar.vue'
 
 export default {
-  components: { DesktopNav }
+  components: { DesktopNav, Navbar }
   
 }
 </script>

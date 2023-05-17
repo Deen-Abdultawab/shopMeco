@@ -1,6 +1,6 @@
 <template>
   <div class="nav">
-    <nav class="mobile-navBar">
+    <div class="mobile-navBar">
         <div class="logo">
             <img src="../assets/images/Mask group.png" alt="">
         </div>
@@ -9,7 +9,7 @@
             <span class="hamburger-middle"></span>
             <span class="hamburger-bottom"></span>
         </div>
-    </nav>
+    </div>
     <section class="overlay" :class="{show: showNav}">
       <div class="sidebar">
         <ul class="nav-links">
