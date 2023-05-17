@@ -3,13 +3,13 @@
         <div class="logo">
             <img src="../assets/images/Mask group.png" alt="">
         </div>
-        <ul>
+        <ul class="nav-links">
             <li ><a href="/">Home</a></li>
             <li><a href="about">About</a></li>
             <li><a href="contact">Contact</a></li>
         </ul>
 
-        <div>
+        <div class="nav-btns">
             <a href="/login"><button class="btn">Sign in</button></a>
             <a href="/started"><button class="btn2">Sign Up</button></a>
         </div>
@@ -39,12 +39,17 @@
         z-index: 9999;
     }
 
-    a {
+   .nav-links a {
         transition: all 0.3s linear;
-        color: #fff !important;
+        color: #fff;
+        font-family: 'Sofia Pro';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 21px;
+        line-height: 21px;
     }
 
-    a:hover, .btn:hover{
+    .nav-links a:hover, .btn:hover{
         color: #FFB74C;
     }
 
@@ -62,21 +67,6 @@
     line-height: 21px;
   }
 
-  ul{
-    display: flex;
-    justify-content: space-between;
-    color: #fff;
-  }
-
-  li{
-    padding-left: 32px;
-    font-family: 'Sofia Pro';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 21px;
-    line-height: 21px;
-  }
-
   .btn{
     color: #fff;
     font-family: 'Sofia Pro';
@@ -84,7 +74,6 @@
     font-weight: 400;
     font-size: 21px;
     line-height: 21px;
-    padding-right: 33px;
     transition: all 0.3s linear;
   }
 
@@ -94,6 +83,13 @@
 
   .btn2:hover {
     background: #865203;
+  }
+
+  .nav-links, .nav-btns {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2.5rem;
   }
 
   @media only screen and (max-width: 900px){

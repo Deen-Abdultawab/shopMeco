@@ -3,8 +3,8 @@
   <header>
 
     <div class="navbars">
-      <Navbar class="mobile-nav"/>
       <DesktopNav />
+      <Navbar class="mobile-nav"/>
 
     </div>
     <div class="main-container">
@@ -256,6 +256,9 @@ form button{
 
     header {
        background: url(../assets/images/bg2.png);
+       background-size: cover;
+        background-repeat: no-repeat;
+       min-height: 700px;
     }
 
     .mobile-nav {

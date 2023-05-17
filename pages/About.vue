@@ -2,8 +2,8 @@
  <div>
   <header>
     <div class="navbars">
-      <Navbar class="mobile-nav"/>
       <DesktopNav />
+      <Navbar class="mobile-nav"/>
     </div>
     <div class="main-container">
     <div>  
