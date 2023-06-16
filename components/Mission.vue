@@ -23,9 +23,9 @@
 
    <div>
    <h4>We connect customers with expert technicians.</h4>
-          <div class="control">
-        
-          <div class="iCountUp border-btm">
+    <div class="control">
+  
+    <div class="iCountUp border-btm">
     <ICountUp
       :delay="delay"
       :endVal="endVal"
@@ -104,14 +104,6 @@
 </script>
 
 <style scoped>
-
-  *, 
-  ::before, 
-  ::after {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-  }
 
   .all{
     display:grid; 
@@ -195,6 +187,7 @@
     text-align: center;
     color: #5007E0;
     padding-top: 17px;
+    text-transform: capitalize;
   }
 
   .control{
@@ -230,6 +223,7 @@
     .all{
       grid-template-columns: 1fr;
       gap: 3rem;
+      padding: 1rem 1.4rem;
     }
 
     .all .mission-icon2 {
@@ -253,16 +247,38 @@
       border-image: linear-gradient(to right, #F5F3FF, #26046A,#F5F3FF );
       border-image-slice: 1;
     }      
+
+    .cover {
+      margin-top: 0;
+    }
   }
 
     @media only screen and (max-width: 600px) {
       .mission {
         align-items: center;
+        
       }
        
-     .mission   p{
-        font-size: 20px;
-      }     
+     .mission p{
+        font-size: 1.1rem;
+      } 
+
+      .cover h2 {
+        font-size: 1.63rem;
+      }
+      
+      .all {
+        padding: 2px;
+        
+      }
+
+      .iCountUp p {
+        font-size: 1.2rem;
+      }
+
+      h4 {
+        margin: 50px auto;
+      }
 
     }
 </style>

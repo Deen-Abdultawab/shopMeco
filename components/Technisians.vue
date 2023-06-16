@@ -4,11 +4,11 @@
                 <h2>Meet Some of Our registered Technicians</h2>
 
                 <div class="tech">
-                    <div v-for="(doc, index) in technician" :key="index"> 
-                    <img  :src="require('@/assets/images/' + doc.img)" alt="" />
-                    <div class="avatar_name">{{doc.name}}</div>
-                <div class="avatar_skills">{{ doc.work }}</div>
-                </div>
+                    <div v-for="(doc, index) in technician" :key="index" class="single"> 
+                        <img  :src="require('@/assets/images/' + doc.img)" alt="" />
+                        <div class="avatar_name">{{doc.name}}</div>
+                        <div class="avatar_skills">{{ doc.work }}</div>
+                    </div>
                 </div>
         </div>
         <div class="trust ">
@@ -81,6 +81,12 @@ export default {
         text-align: center;
     }
 
+    .tech img {
+        width: 100%;
+        object-fit: cover;
+        display: block;
+    }
+
     .trust{
         background: url('../assets/images/mask.png'), #7029FF;
         border-radius: 20px;
@@ -115,6 +121,11 @@ export default {
         align-items: center;
         padding: 18px 40px 17px;
         color: #fff;
+        transition: all 0.3s linear;
+    }
+
+    button:hover {
+        background: #865203;
     }
 
      @media only screen and (max-width: 900px) {
@@ -130,23 +141,33 @@ export default {
 
         .cover h2 {
             margin-bottom: 1.2rem;
+            padding: 0;
         }
 
-            .tech {
-        display:flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-    } 
+        .tech {
+            flex-direction: column;
+        } 
+
+        .mission-container {
+            padding: 0 1rem;
+        }
 
      }
 
-      @media only screen and (max-width: 600px) {
-     
-    h3{
-       /* width: 300px; */
-       font-size: 24px; 
+    @media only screen and (max-width: 600px) {
+    
+        h3{
+        /* width: 300px; */
+        font-size: 1.2rem; 
+        line-height: 20px;
+        }
+
+        .cover {
+            margin-top: 3rem;
+        }
+
+        .cover h2 {
+            font-size: 1.63rem;
+        }
     }
-      }
 </style>

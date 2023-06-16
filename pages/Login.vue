@@ -207,27 +207,12 @@ export default {
     font-family: 'Sofia Pro';
     font-style: normal;
     font-weight: 400;
-    font-size: 20px;
     line-height: 31px;
     color: #7C7C7C;
     margin-bottom: 5px;
   }
 
-  .form-input > input, .password-field > input{
-    border: 1px solid #7C7C7C;
-    box-sizing: border-box;
-    border-radius: 10px;
-    width: 100%;
-    padding: 15px 10px;
-    font-family: 'Sofia Pro';
-    font-style: normal;
-    font-weight: 500;
-    font-size: 18px;
-    line-height: 18px;
-    color: #5007E0; 
-  }
-
-  input:focus {
+  .input:focus {
     outline: #5007E0;
   }
 

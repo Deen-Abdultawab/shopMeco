@@ -1,669 +1,642 @@
 <template>
   <div>
-    <Navbar class="mobile-nav"/>
+    <Navbar class="mobile-nav" />
     <div class="container">
       <div class="left-col">
         <div class="logo">
-          <a href="/"><img src="../assets/images/Mask group.png" alt=""></a>
+          <a href="/"><img src="../assets/images/Mask group.png" alt="" /></a>
         </div>
 
         <div class="quote">
-            <img src="../assets/images/Group 3721.png" alt="">
+          <img src="../assets/images/Group 3721.png" alt="" />
         </div>
       </div>
-      
-      <div class="right-col first">
-        <!-- <navbar class="mobile-nav"/> -->
-        <div class="top-right">
-          <div class="btn-back">
-            <a href="/started" style="display:flex; align-items: center;">
-            <img src="../assets/images/icon.png" alt="" style="width:20px; height:20px; margin-right: 10px;"> back
-          </a>
-          </div>
-          <div class="step">
-            <h4>STEP 01/03</h4>
-            <h6>Personal Info.</h6>
-          </div>
-        </div>
-
-        <div class="center-form">
-
-          <div class="log">
-            <h1>Register Individual Account</h1>
-            <p>Your details are required to set up your account and get you going.</p>
+      <div class="right-col-container">
+        <div class="right-col first" v-if="showOne">
+          <div class="top-right">
+            <div class="btn-back">
+              <router-link :to="{ name: 'Started'}" style="display:flex; align-items: center;">
+                <img src="../assets/images/icon.png" alt="" style="width:20px; height:20px; margin-right: 10px;"> back
+              </router-link>
+            </div>
+            <div class="step">
+              <h4>STEP 01/03</h4>
+              <h6>Personal Info.</h6>
+            </div>
           </div>
 
-          <div class="one">
-            <form action="">
+          <div class="center-form">
+            <div class="log">
+              <h1>Register Individual Account</h1>
+              <p>
+                Your details are required to set up your account and get you
+                going.
+              </p>
+            </div>
 
-              <div class="form-input">
-                <label for="name" >
-                  Your fullname<span>*</span>
-                </label> 
-                <br>
-                <input type="text" placeholder="Tolulope Ololade" id="name" required>
-              </div>
-
-              <div class="form-input">
-                <label for="mail" >
-                  Email address<span>*</span>
-                </label> 
-                <br>
-                <input type="email" placeholder="Enter email address" id="mail" required>
-              </div>
-
-              <div class="form-input">
-                <label for="password">
-                  Create Password<span>*</span>
-                </label> 
-                <br>
-                <div class="password-field">
-                  <input type="password" placeholder="Enter password" id="password" required>
-                  <button class="placeholder-span">Show</button>
+            <div class="one">
+              <form @submit.prevent="handleFirst">
+                <div class="form-input">
+                  <label for="name"> Your full name<span>*</span> </label>
+                  <br />
+                  <input
+                    type="text"
+                    placeholder="Tolulope Ololade"
+                    id="name"
+                    required
+                  />
                 </div>
 
-                <div class="formy">
-                  <div>
-                      <input type="checkbox" name="" id="" class="checkbox"> 
-                      <span >I agree to <a href="#" class="terms">terms & conditions</a></span> 
+                <div class="form-input">
+                  <label for="mail"> Email address<span>*</span> </label>
+                  <br />
+                  <input
+                    type="email"
+                    placeholder="Enter email address"
+                    id="mail"
+                    required
+                  />
+                </div>
+
+                <div class="form-input">
+                  <label for="password"> Create Password<span>*</span> </label>
+                  <br />
+                  <div class="password-field">
+                    <input
+                      type="password"
+                      placeholder="Enter password"
+                      id="password"
+                      required
+                    />
+                    <button class="placeholder-span">Show</button>
                   </div>
 
-                  <div>
-                    <a href="/" class="forget-password">Forget Password?</a>
+                  <div class="formy">
+                    <input type="checkbox" name="" id="" class="checkbox" />
+                    <span
+                      >I agree to
+                      <a href="#" class="terms">terms & conditions</a></span
+                    >
                   </div>
                 </div>
-              </div>    
 
-              <button class=" btn btn1">Login</button>
+                <button class="btn btn1">Register Account</button>
 
-              <div class="or">
+                <div class="or">
                   <div class="line"></div>
                   <div class="text">OR</div>
                   <div class="line"></div>
-              </div>
+                </div>
 
-              <button class="btn btn2">
-                <img src="../assets/images/Group 3707.png" alt="">
-              </button>
-            </form>
-
+                <div class="btn btn2">
+                  <img src="../assets/images/Group 3707.png" alt="" />
+                </div>
+              </form>
+            </div>
           </div>
-
         </div>
-      </div>
-
 
         <!-- Residency info  -->
 
-      <div class="right-col second">
-        <!-- <navbar class="mobile-nav"/> -->
+        <div class="right-col second" v-if="showTwo">
 
-        <div class="top-right">
-          <div class="btn-back">
-            <a href="/started" style="display:flex; align-items: center;">
-            <img src="../assets/images/icon.png" alt="" style="width:20px; height:20px; margin-right: 10px;"> back
-          </a>
-          </div>
-          <div class="step">
-            <h4>STEP 02/03</h4>
-            <h6>Residency Info.</h6>
-          </div>
-        </div>
-
-        <div class="center-form">
-
-          <div class="log">
-             <h1>Complete Your Profile</h1>
-            <p>Your details are required to set up your account and get you going.</p>
+          <div class="top-right">
+            <div class="btn-back">
+              <a href="#" style="display: flex; align-items: center" @click="handleBackOne">
+                <img
+                  src="../assets/images/icon.png"
+                  alt=""
+                  style="width: 20px; height: 20px; margin-right: 10px"
+                />
+                back
+              </a>
+            </div>
+            <div class="step">
+              <h4>STEP 02/03</h4>
+              <h6>Residency Info.</h6>
+            </div>
           </div>
 
-          <div class="one">
-            <form action="">
+          <div class="center-form">
+            <div class="log">
+              <h1>Complete Your Profile</h1>
+              <p>
+                Your details are required to set up your account and get you
+                going.
+              </p>
+            </div>
 
-              <div class="form-input">
-                <label for="number" >
-                  Your phone number
-                </label> 
-                <br>
-                <input type="number" placeholder="Enter your phone number" id="number" required>
-              </div>
-
-              <div class="form-input">
-                <label for="residence" >
-                  State of residence
-                </label> 
-                <br>
-                <select name="residence" id="residence">
-                  <option value="">- - Select - -</option>
-                  <option value="">1998</option>
-                  <option value="">1998</option>
-                  <option value="">1998</option>
-                  <option value="">1998</option>
-                  <option value="">1998</option>
-                  <option value="">1998</option>
-                  <option value="">1998</option>
-                  <option value="">1998</option>
-                </select>        
-              </div>
-
-              <div class="form-input">
-                <label for="address">
-                  Your address
-                </label> 
-                <br>
-                  <textarea name="" id="" cols="30" rows="10" placeholder="Enter your address"></textarea>
-              </div> 
-
-              <div class="bottom-right">
-                <h4>Need to complete profile later? <a href="#">Click Here</a></h4>
-              </div>  
-
-              <button class=" btn btn1">Save & Continue</button>
-
-              <div class="bottom">
-                <img src="../assets/images/Group 3720.png" alt="">
-              </div>
-            </form>
-          </div>
-
-        </div>
-      </div>
-
-
-      <!-- service info  -->
-
-       <div class="right-col third">
-        <div class="top-right">
-          <div class="btn-back">
-            <a href="/started" style="display:flex; align-items: center;">
-            <img src="../assets/images/icon.png" alt="" style="width:20px; height:20px; margin-right: 10px;"> back
-          </a>
-          </div>
-          <div class="step">
-            <h4>STEP 02/03</h4>
-            <h6>Residency Info.</h6>
-          </div>
-        </div>
-
-        <div class="center-form">
-
-          <div class="log">
-            <h1>Almost Done!</h1>
-            <p>Your details are required to set up your account and get you going.</p>
-          </div>
-
-          <div class="one">
-            <form action="">
-
-              <div class="form-input">
-                <label for="car" >
-                  Your phone number
-                </label> 
-                <br>
-                <input type="text" placeholder="Mercedez Benz" id="car" required>
-              </div>
-
-              <div class="form-input">
-                <label for="model" >
-                  Car Model
-                </label> 
-                <br>
-                <select name="model" id="model">
-                  <option value="">-- Select --</option>
-                  <option value="">1998</option>
-                  <option value="">1998</option>
-                  <option value="">1998</option>
-                  <option value="">1998</option>
-                  <option value="">1998</option>
-                  <option value="">1998</option>
-                  <option value="">1998</option>
-                  <option value="">1998</option>
-                </select>
-                       
-              </div>
-
-              <div class="form-input">
-                <label for="service" >
-                  Required Service(s)
-                </label> 
-                <br>
-                <select name="service" id="service">
-                  <option value="">-- Select --</option>
-                  <option value="">1998</option>
-                  <option value="">1998</option>
-                  <option value="">1998</option>
-                  <option value="">1998</option>
-                  <option value="">1998</option>
-                  <option value="">1998</option>
-                  <option value="">1998</option>
-                  <option value="">1998</option>
-                </select>
-                <div class="service">
-                  <span>Bodywork, airconditioning, automechanic</span>
+            <div class="one">
+              <form @submit.prevent="handleSecond">
+                <div class="form-input">
+                  <label for="number"> Your phone number </label>
+                  <br />
+                  <input
+                    type="number"
+                    placeholder="Enter your phone number"
+                    id="number"
+                    required
+                  />
                 </div>
-                       
-              </div>
 
-               
+                <div class="form-input">
+                  <label for="residence"> State of residence </label>
+                  <br />
+                  <select name="residence" id="residence">
+                    <option value="">- - Select - -</option>
+                    <option value="">1998</option>
+                    <option value="">1998</option>
+                    <option value="">1998</option>
+                    <option value="">1998</option>
+                    <option value="">1998</option>
+                    <option value="">1998</option>
+                    <option value="">1998</option>
+                    <option value="">1998</option>
+                  </select>
+                </div>
 
-              <div class="bottom-right">
-                <h4>Need to complete profile later? <a href="#">Click Here</a></h4>
-              </div>  
+                <div class="form-input">
+                  <label for="address"> Your address </label>
+                  <br />
+                  <textarea
+                    name=""
+                    id=""
+                    cols="30"
+                    rows="10"
+                    placeholder="Enter your address"
+                  ></textarea>
+                </div>
 
-              <button class=" btn btn1">Save & Continue</button>
+                <div class="bottom-right">
+                  <h4>
+                    Need to complete profile later? <a href="#">Click Here</a>
+                  </h4>
+                </div>
 
-              <div class="bottom">
-                <img src="../assets/images/Group 3720.png" alt="">
-              </div>
-            </form>
+                <button class="btn btn1">Save & Continue</button>
+
+                <div class="bottom">
+                  <img src="../assets/images/Group 3720.png" alt="" />
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+
+        <!-- service info  -->
+
+        <div class="right-col third" v-if="showThree">
+          <div class="top-right">
+            <div class="btn-back">
+              <a href="#" style="display: flex; align-items: center" @click="handleBackTwo">
+                <img
+                  src="../assets/images/icon.png"
+                  alt=""
+                  style="width: 20px; height: 20px; margin-right: 10px"
+                />
+                back
+              </a>
+            </div>
+            <div class="step">
+              <h4>STEP 02/03</h4>
+              <h6>Residency Info.</h6>
+            </div>
           </div>
 
+          <div class="center-form">
+            <div class="log">
+              <h1>Almost Done!</h1>
+              <p>
+                Your details are required to set up your account and get you
+                going.
+              </p>
+            </div>
+
+            <div class="one">
+              <form >
+                <div class="form-input">
+                  <label for="car"> Your phone number </label>
+                  <br />
+                  <input
+                    type="text"
+                    placeholder="Mercedez Benz"
+                    id="car"
+                    required
+                  />
+                </div>
+
+                <div class="form-input">
+                  <label for="model"> Car Model </label>
+                  <br />
+                  <select name="model" id="model">
+                    <option value="">-- Select --</option>
+                    <option value="">1998</option>
+                    <option value="">1998</option>
+                    <option value="">1998</option>
+                    <option value="">1998</option>
+                    <option value="">1998</option>
+                    <option value="">1998</option>
+                    <option value="">1998</option>
+                    <option value="">1998</option>
+                  </select>
+                </div>
+
+                <div class="form-input">
+                  <label for="service"> Required Service(s) </label>
+                  <br />
+                  <select name="service" id="service">
+                    <option value="">-- Select --</option>
+                    <option value="">1998</option>
+                    <option value="">1998</option>
+                    <option value="">1998</option>
+                    <option value="">1998</option>
+                    <option value="">1998</option>
+                    <option value="">1998</option>
+                    <option value="">1998</option>
+                    <option value="">1998</option>
+                  </select>
+                  <div class="service">
+                    <span>Bodywork, airconditioning, automechanic</span>
+                  </div>
+                </div>
+
+                <div class="bottom-right">
+                  <h4>
+                    Need to complete profile later? <a href="#">Click Here</a>
+                  </h4>
+                </div>
+
+                <button class="btn btn1">Save & Continue</button>
+
+                <div class="bottom">
+                  <img src="../assets/images/Group 3720.png" alt="" />
+                </div>
+              </form>
+            </div>
+          </div>
         </div>
       </div>
-        <!-- end of service info  -->
     </div>
   </div>
 </template>
 
 <script>
-import Navbar from '~/components/Navbar.vue';
+import { ref } from "vue";
+import Navbar from "~/components/Navbar.vue";
 
 export default {
-  components: { Navbar }
-}
+  components: { Navbar },
+  setup(){
+    const showOne = ref(true)
+    const showTwo = ref(false)
+    const showThree = ref(false)
 
+    function handleFirst(){
+      showOne.value = false
+      showTwo.value = true
+
+      console.log(showOne.value, showTwo.value, showThree.value)
+    }
+
+    function handleSecond(){
+      showTwo.value = false
+      showThree.value = true
+    }
+
+    function handleBackOne(){
+      showTwo.value = false
+      showOne.value = true
+    }
+
+    function handleBackTwo(){
+      showThree.value = false
+      showTwo.value = true
+    }
+
+
+    return { showOne, showTwo, showThree, handleFirst, handleBackOne, handleSecond, handleBackTwo}
+  }
+};
 </script>
 
 <style scoped>
-
-@import url('https://fonts.googleapis.com/css2?family=Fruktur&family=Inter:wght@100;200;300;400;600;700;800&family=Licorice&display=swap');
-@import url('http://fonts.cdnfonts.com/css/sofia-pro');
-
+@import url("https://fonts.googleapis.com/css2?family=Fruktur&family=Inter:wght@100;200;300;400;600;700;800&family=Licorice&display=swap");
+@import url("http://fonts.cdnfonts.com/css/sofia-pro");
 
 
-*, 
-  ::before, 
-  ::after {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+body {
+  width: 100%;
+}
+
+h1 {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 40px;
+  line-height: 48px;
+  color: #1f1f1f;
+  margin-bottom: 10px;
+  width: 100%;
+}
+
+p {
+  width: 100%;
+  margin: 0;
+}
+
+a {
+  color: #5007e0;
+}
+
+h4 {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 28px;
+  color: #7c7c7c;
+  width: 100%;
+}
+
+.mobile-nav {
+  display: none;
+  width: 100%;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1.2fr 1.5fr;
+  min-height: 100vh;
+  max-width: 100vw;
+  padding: 0;
+}
+
+.right-col-container {
+  position: relative;
+  /* border: 1px solid red; */
+}
+
+.right-col {
+  padding: 5rem 2.5rem 10rem;
+}
+
+.left-col {
+  display: grid;
+  width: 100%;
+  height: 100%;
+}
+
+.left-col {
+  background: url("../assets/images/bg2.png");
+  background-position: center;
+  background-size: cover;
+  padding: 2.5rem;
+  padding-bottom: 4rem;
+  gap: 2rem;
+}
+
+.left-col div {
+  width: 100%;
+}
+
+.quote img,
+.bottom img {
+  width: auto;
+  margin: 0 auto;
+}
+
+.top-right {
+  display: block;
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 4rem;
+}
+
+a {
+  color: #5007e0;
+}
+.step {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 28px;
+  color: #7c7c7c;
+  text-align: right;
+}
+
+.step h6 {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 19px;
+  color: #7c7c7c;
+}
+.step h4 {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+  color: #5007e0;
+}
+
+.center-form {
+  max-width: 550px;
+  padding-left: 5rem;
+}
+
+.log p {
+  font-family: "Sofia Pro";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 28px;
+  color: #7c7c7c;
+  padding-bottom: 55px;
+}
+
+.log h1 {
+  font-size: 36px;
+}
+
+.form-input {
+  margin-bottom: 2rem;
+}
+
+.password-field {
+  position: relative;
+}
+
+label span {
+  display: none;
+}
+
+:is(input, select, textarea):focus {
+  outline: #5007e0;
+}
+
+:is(input, select, textarea):hover {
+  border: 1px solid #5007e0;
+}
+
+select {
+  padding: 16.5px 30px;
+}
+
+.placeholder-span {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 15px;
+  color: #5007e0;
+  cursor: pointer;
+  height: 17px;
+}
+
+.checkbox {
+  margin-right: 5px;
+}
+
+span a {
+  text-decoration: underline;
+  font-weight: 700;
+}
+
+.btn {
+  width: 100%;
+  padding: 1rem 2rem;
+  cursor: pointer;
+}
+
+.btn1 {
+  background: #5007e0;
+  border-radius: 10px;
+  font-family: "Sofia Pro";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 24px;
+  color: #ffffff;
+}
+
+.btn2 {
+  background: #ffffff;
+  border: 1px solid #b5b5b5;
+  box-sizing: border-box;
+  box-shadow: 0px 6px 50px rgba(74, 25, 172, 0.05);
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.or {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 10px 0;
+  padding: 1rem;
+}
+
+.line {
+  max-width: 192px;
+  height: 0px;
+  border: 1px solid #7c7c7c;
+  flex: 1;
+}
+
+.text {
+  flex-basis: 10%;
+  text-align: center;
+}
+
+.first {
+  display: block;
+}
+
+.bottom-right {
+  width: 100%;
+  text-align: right;
+  margin: 1rem 0 0.5rem 0;
+  font-size: 12px;
+}
+.bottom {
+  margin-top: 2rem;
+  width: 100%;
+}
+.service {
+  color: #5007e0;
+  font-size: 15px;
+  font-weight: 500;
+  margin-top: 5px;
+}
+
+@media only screen and (max-width: 1200px) {
+  .center-form {
+    padding-left: 0rem;
   }
+}
 
-  body {
-    width: 100%;
-  }
-
-  img {
-    display: block;
-    object-fit: cover;
-    margin: 0;
-  }
-
-  h1{
-    font-family: 'Inter';
-    font-style: normal;
-    font-weight: 600;
-    font-size: 40px;
-    line-height: 48px;
-    color: #1F1F1F;
-    margin-bottom: 10px;
-    width: 100%;
-  }
-
-  p {
-    width: 100%;
-    margin: 0;
-  }
-
-  a{
-    color:  #5007E0;
-  }
-
-  h4{
-    font-family: 'Inter';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 18px;
-    line-height: 28px;
-    color: #7C7C7C;
-    width: 100%;
-  }
-
-  .mobile-nav {
-    display: none;
-    width: 100%;
-  }
-
+@media only screen and (max-width: 900px) {
   .container {
-    display: grid;
-    grid-template-columns: 1.2fr 1.5fr;
-    min-height: 100vh;
-    max-width: 100vw;
-          
-  }
-
-  .left-col, .right-col {
-    display: grid;
-    width: 100%;
-    height: 100%;
+    grid-template-columns: 1fr;
   }
 
   .left-col {
-    background: url('../assets/images/bg2.png');
-    background-position: center;
-    background-size: cover;
-    padding: 2.5rem;
-    padding-bottom: 4rem;
-    gap: 2rem;
+    gap: 8.5rem;
+    padding-bottom: 10rem;
   }
 
-  .left-col div, .right-col div {
-    width: 100%;
+  .quote img {
+    margin: auto;
   }
 
-  .quote img, .bottom img {
-    width: auto;
-    margin: 0 auto;
-    /* border: 1px solid red; */
+  .right-col {
+    place-items: center;
+    padding: 5rem 1.25rem 10rem;
   }
-
-  .right-col{
-    padding: 5rem 2.5rem 10rem;
-    gap: 5rem;     
-  }
-
-  
-  .top-right {
-    display: block;
-    position: relative;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 4rem;
-    /* padding: 0 0.5rem; */
-    /* border: 1px solid red; */
-  }
-
-  a{
-    color:  #5007E0;
-    }
-    .step{
-      
-        font-family: 'Inter';
-        font-style: normal;
-        font-weight: 400;
-        font-size: 18px;
-        line-height: 28px;
-        color: #7C7C7C;
-        text-align: right;
-    }
-
-    .step h6{
-      font-family: 'Inter';
-      font-style: normal;
-      font-weight: 600;
-      font-size: 16px;
-      line-height: 19px;
-      color: #7C7C7C;
-    }
-    .step h4{
-      font-family: 'Inter';
-      font-style: normal;
-      font-weight: 500;
-      font-size: 14px;
-      line-height: 17px;
-      color: #5007E0;
-    }
 
   .center-form {
-    max-width: 550px;
-    padding-left: 5rem;
+    padding: 0;
   }
+}
 
-  .log p{
-    font-family: 'Sofia Pro';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 20px;
-    line-height: 28px;
-    color: #7C7C7C;
-    padding-bottom: 55px;
-  }
-
-  .log h1 {
-    font-size: 36px;
-  }
-
-  .form-input {
-    margin-bottom: 2rem;
-  }
-
-  .password-field {
-    position: relative;
-  }
-
-  input::placeholder{
-    font-size: 15px;
-    letter-spacing: 1.2;
-    /* border: 1px solid red; */
-  }
-
-  label{
-    font-family: 'Sofia Pro';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 20px;
-    /* line-height: 31px; */
-    color: #7C7C7C;
-    
-  }
-
-  label span {
-    color: red;
+@media only screen and (max-width: 600px) {
+  .left-col {
     display: none;
   }
 
-  .form-input > input, .password-field > input, select, textarea{
-    border: 1px solid #7C7C7C;
-    border-radius: 10px;
-    width: 100%;
-    padding: 15px 10px;
-    margin-top: 2px;
-    font-family: 'Sofia Pro';
-    font-style: normal;
-    font-weight: 500;
-    font-size: 18px;
-    line-height: 18px;
-    color: #5007E0; 
+  .right-col {
+    padding-top: 2rem;
   }
 
-  :is(input, select, textarea):focus {
-    outline: #5007E0;
-  }
-
-  :is(input, select, textarea):hover{
-    border: 1px solid #5007E0;
-  }
-
-  select {
-    padding: 16.5px 30px;
-  }
-
-  .placeholder-span {
-    position: absolute;
-    right: 12px;
-    top: 50%;
-    transform: translateY( -50%);
-    font-size: 15px;
-    color: #5007E0;
-    cursor: pointer;
-    /* border: 1px solid green; */
-    height: 17px;
-  }
-
-   .formy{
-    width: 100%;
-    display: flex;
-    margin-top: 5px;
-  }
-
-  .formy div:last-child {
-    text-align: right;
-  }
-
-  .formy .forget-password {
-    font-size: 12px;
-  }
-
-  .checkbox {
-    margin-right: 5px;
-  }
-
-  span a {
-    text-decoration: underline;
-    font-weight: 700;
-  }
-
-  .btn {
-    width: 100%;
-    padding: 1rem 2rem;
-  }
-
-  .btn1{
-    background: #5007E0;
-    border-radius: 10px;
-    font-family: 'Sofia Pro';
-    font-style: normal;
-    font-weight: 500;
-    font-size: 24px;
-    line-height: 24px;
-    color: #FFFFFF;
-  }
-
-  .btn2{
-    background: #FFFFFF;
-    border: 1px solid #B5B5B5;
-    box-sizing: border-box;
-    box-shadow: 0px 6px 50px rgba(74, 25, 172, 0.05);
-    border-radius: 6px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-
-   .or{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin: 10px 0;
-    padding: 1rem;
-  }
-
-
-  .line{
-      max-width: 192px;
-      height: 0px;
-      border: 1px solid #7C7C7c;
-      flex: 1;
-  }
-
-  .text {
-    flex-basis: 10%;
-    text-align: center;
-  }
-
-  .first{
+  .mobile-nav {
     display: block;
   }
 
-  .second{
-    display: none;
-  }
-
-  .third {
-    display: none;
-  }
-
-  .bottom-right {
-    width: 100%;
-    text-align: right;
-    margin: 1rem 0 0.5rem 0;
-    font-size: 12px;
-  }
-
-  .bottom {
-    margin-top: 2rem;
-    width: 100%;
-  }
-
-  .service {
-    color: #5007E0;
-    font-size: 15px;
-    font-weight: 500;
-    margin-top: 5px;
-  }
-
-   @media only screen and (max-width: 1200px) {
-    .center-form {
-      padding-left: 0rem;
-    }
-     
-  }
-
-  @media only screen and (max-width: 900px) {
-
-    .container {
-      grid-template-columns: 1fr;
-    }
-
-    .left-col {
-      gap: 8.5rem;
-      padding-bottom: 10rem;
-    }
-
-    .quote img {
-      margin: auto;
-    }
-
-    .right-col {
-      place-items: center;
-    }
-
-    .center-form {
-      padding: 0;
-    }
-    
-  }
-
-  @media only screen and (max-width: 600px) {
-    .left-col {
-      display: none;
-    }
-
-    .right-col {
-      padding-top: 2rem;
-    }
-
-    .mobile-nav {
-      display: block;
-    }
-
-    .formy span {
+  .formy span {
     font-size: 13px;
   }
+}
 
+@media only screen and (max-width: 500px) {
+  .log h1 {
+    font-size: 1.5rem;
+  }
+
+  .log p {
+    font-size: 1.1rem;
+    line-height: 1.5;
+  } 
+
+  form label {
+    font-size: 1rem;
+  }
   
-
-
-  }
-
-  @media only screen and (max-width: 480px){
-    .terms {
-    display: block;
-  }
-  }
-
-
-
-   
+}
 </style>

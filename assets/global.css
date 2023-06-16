@@ -1,0 +1,104 @@
+*,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+input::placeholder {
+  font-size: 14px;
+  letter-spacing: 2;
+}
+
+img {
+  /* display: block; */
+  object-fit: cover;
+  z-index: 999999999;
+}
+
+.formy {
+  width: 100%;
+  margin-top: 5px;
+  display: flex;
+  align-items: center;
+}
+
+label {
+  font-family: "Sofia Pro";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1rem;
+  color: #7c7c7c;
+  text-transform: capitalize;
+}
+
+.center-form .btn1,
+.center-form .btn2 {
+  transition: all 0.3s linear;
+}
+
+.center-form .btn1:hover {
+  background: #1d0252;
+}
+
+.center-form .btn2:hover {
+  background: #a3a2a2;
+}
+
+.nav-links a:active {
+  color: #ffb74c;
+  text-decoration: underline;
+}
+
+.form-input > input, .password-field > input, select, textarea{
+    border: 1px solid #7C7C7C;
+    border-radius: 10px;
+    width: 100%;
+    padding: 15px 10px;
+    margin-top: 8px;
+    font-family: 'Sofia Pro';
+    font-style: normal;
+    font-size: 18px;
+    line-height: 18px;
+    color: #5007E0; 
+  }
+
+  .formy span {
+    font-size: 14.5px;
+  }
+
+  header {
+    height: 46rem;
+    margin-bottom: 3rem;
+  }
+
+  .body {
+    position: relative;
+    height: 100%;
+  }
+
+  .other-containers {
+    position: absolute;
+    top: 55rem;
+    display: block;
+    width: 100%;
+  }
+
+  @media only screen and (max-width: 900px){
+    header {
+      height: auto;
+      background-size: cover ;
+      margin-bottom: 2rem;
+    }
+
+    .other-containers {
+      position: relative;
+      top: 0;
+    }
+  }
+  @media only screen and (max-width: 600px){
+     header {
+      min-height: 100vh;
+    }
+  }

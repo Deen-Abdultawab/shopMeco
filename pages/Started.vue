@@ -26,34 +26,31 @@
             <h1>Get Started</h1>
         </div>
 
-        <a href="/individual">
-            <div class="one">
-                <div class="img">
-                    <img src="../assets/images/Group 3702.png" alt="">
-                </div>
-                <div class="text">
-                    <h5>Individual / Car Owners</h5>
-                    <p>Personal account to manage your car and keep it in good condition.</p>
-                </div>
-                <div class="img">
-                    <img src="../assets/images/Union.png" alt="">
-                </div>
-            </div>
-        </a>
-
-        <a href="/business">
-            <div class="two">
-                <div class="img">
-                    <img src="../assets/images/Group 3699.png" alt="">
-                </div>
-                <div class="text">
-                    <h5>Business</h5>
-                    <p>Business account for individual service providers and companies.</p>
-                </div>
-            </div>
-        </a>
-
-        
+        <router-link :to="{ name: 'Individual'}">
+          <div class="one">
+              <div class="img">
+                  <img src="../assets/images/Group 3702.png" alt="">
+              </div>
+              <div class="text">
+                  <h5>Individual / Car Owners</h5>
+                  <p>Personal account to manage your car and keep it in good condition.</p>
+              </div>
+              <div class="img">
+                  <img src="../assets/images/Union.png" alt="">
+              </div>
+          </div>
+        </router-link>
+        <router-link :to="{ name: 'Business'}">
+          <div class="two">
+              <div class="img">
+                  <img src="../assets/images/Group 3699.png" alt="">
+              </div>
+              <div class="text">
+                  <h5>Business</h5>
+                  <p>Business account for individual service providers and companies.</p>
+              </div>
+          </div>
+        </router-link>       
       </div>
     </div>
   </div>

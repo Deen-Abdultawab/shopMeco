@@ -12,13 +12,13 @@
         </div>
       </div>
       
-      <div class="right-col first">
+      <div class="right-col first" v-if="showOne">
         <!-- <navbar class="mobile-nav"/> -->
         <div class="top-right">
           <div class="btn-back">
-            <a href="/started" style="display:flex; align-items: center;">
-            <img src="../assets/images/icon.png" alt="" style="width:20px; height:20px; margin-right: 10px;"> back
-          </a>
+            <router-link :to="{ name: 'Started'}" style="display:flex; align-items: center;">
+              <img src="../assets/images/icon.png" alt="" style="width:20px; height:20px; margin-right: 10px;"> back
+            </router-link>
           </div>
           <div class="step">
             <h4>STEP 01/03</h4>
@@ -34,14 +34,14 @@
           </div>
 
           <div class="one">
-            <form action="">
+            <form @submit.prevent="handleFirst">
 
               <div class="form-input">
                 <label for="name" >
-                  Your fullname<span>*</span>
+                  Your full name<span>*</span>
                 </label> 
                 <br>
-                <input type="text" placeholder="Tolulope Ololade" id="name" required>
+                <input type="text" placeholder="Tolulope Ololade" id="name" required v-model="name">
               </div>
 
               <div class="form-input">
@@ -63,18 +63,12 @@
                 </div>
 
                 <div class="formy">
-                  <div>
-                      <input type="checkbox" name="" id="" class="checkbox"> 
-                      <span >I agree to <a href="#" class="terms">terms & conditions</a></span> 
-                  </div>
-
-                  <div>
-                    <a href="/" class="forget-password">Forget Password?</a>
-                  </div>
+                    <input type="checkbox" name="" id="" class="checkbox"> 
+                    <span >I agree to <a href="#" class="terms">terms & conditions</a></span> 
                 </div>
               </div>    
 
-              <button class=" btn btn1">Login</button>
+              <button class=" btn btn1">Register Account</button>
 
               <div class="or">
                   <div class="line"></div>
@@ -82,9 +76,9 @@
                   <div class="line"></div>
               </div>
 
-              <button class="btn btn2">
+              <div class="btn btn2">
                 <img src="../assets/images/Group 3707.png" alt="">
-              </button>
+              </div>
             </form>
 
           </div>
@@ -93,14 +87,14 @@
       </div>
 
 
-        <!-- Residency info  -->
+        <!-- Workshop info  -->
 
-      <div class="right-col second">
+      <div class="right-col second" v-if="showTwo">
         <!-- <navbar class="mobile-nav"/> -->
 
         <div class="top-right">
           <div class="btn-back">
-            <a href="/started" style="display:flex; align-items: center;">
+            <a href="#" style="display:flex; align-items: center;" @click="handleBackOne">
             <img src="../assets/images/icon.png" alt="" style="width:20px; height:20px; margin-right: 10px;"> back
           </a>
           </div>
@@ -118,7 +112,7 @@
           </div>
 
           <div class="one">
-            <form action="">
+            <form @submit.prevent="handleSecond">
 
               <div class="form-input">
                 <label for="number" >
@@ -162,10 +156,10 @@
 
       <!-- service info  -->
 
-       <div class="right-col third">
+       <div class="right-col third" v-if="showThree">
         <div class="top-right">
           <div class="btn-back">
-            <a href="/started" style="display:flex; align-items: center;">
+            <a href="" style="display:flex; align-items: center;" @click="handleBackTwo">
             <img src="../assets/images/icon.png" alt="" style="width:20px; height:20px; margin-right: 10px;"> back
           </a>
           </div>
@@ -236,11 +230,47 @@
 </template>
 
 <script>
-import Navbar from '~/components/Navbar.vue';
+import { ref } from "vue";
+import Navbar from "~/components/Navbar.vue";
 
 export default {
-  components: { Navbar }
-}
+  components: { Navbar },
+  setup(){
+    const showOne = ref(true)
+    const showTwo = ref(false)
+    const showThree = ref(false)
+    const name = ref('')
+
+    function handleFirst(){
+      showOne.value = false
+      showTwo.value = true
+      console.log(name.value)
+
+      console.log(showOne.value, showTwo.value, showThree.value)
+    }
+
+    function handleSecond(){
+      showTwo.value = false
+      showThree.value = true
+      console.log(name.value)
+    }
+
+    function handleBackOne(){
+      showTwo.value = false
+      showOne.value = true
+      console.log(name.value)
+    }
+
+    function handleBackTwo(){
+      showThree.value = false
+      showTwo.value = true
+      console.log(name.value)
+    }
+
+
+    return { showOne, showTwo, showThree, handleFirst, handleBackOne, handleSecond, handleBackTwo, name}
+  }
+};
 </script>
 
 <style scoped>
@@ -248,24 +278,8 @@ export default {
 @import url('https://fonts.googleapis.com/css2?family=Fruktur&family=Inter:wght@100;200;300;400;600;700;800&family=Licorice&display=swap');
 @import url('http://fonts.cdnfonts.com/css/sofia-pro');
 
-
-
-*, 
-  ::before, 
-  ::after {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-  }
-
   body {
     width: 100%;
-  }
-
-  img {
-    display: block;
-    object-fit: cover;
-    margin: 0;
   }
 
   h1{
@@ -304,12 +318,12 @@ export default {
   }
 
   .container {
-    display: grid;
-    grid-template-columns: 1.2fr 1.5fr;
-    min-height: 100vh;
-    max-width: 100vw;
-          
-  }
+  display: grid;
+  grid-template-columns: 1.2fr 1.5fr;
+  min-height: 100vh;
+  max-width: 100vw;
+  padding: 0;
+}
 
   .left-col, .right-col {
     display: grid;
@@ -349,8 +363,6 @@ export default {
     display: flex;
     justify-content: space-between;
     margin-bottom: 4rem;
-    /* padding: 0 0.5rem; */
-    /* border: 1px solid red; */
   }
 
   a{
@@ -411,34 +423,12 @@ export default {
     position: relative;
   }
 
-  label{
-    font-family: 'Sofia Pro';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 20px;
-    line-height: 31px;
-    color: #7C7C7C;
-    /* padding-bottom: 20px; */
-  }
-
   label span {
     color: red;
     display: none;
   }
 
-  .form-input > input, .password-field > input, select, textarea{
-    border: 1px solid #7C7C7C;
-    border-radius: 10px;
-    width: 100%;
-    padding: 15px 10px;
-    margin-top: 8px;
-    font-family: 'Sofia Pro';
-    font-style: normal;
-    font-weight: 500;
-    font-size: 18px;
-    line-height: 18px;
-    color: #5007E0; 
-  }
+  
 
   :is(input, select, textarea):focus {
     outline: #5007E0;
@@ -464,23 +454,8 @@ export default {
 
   }
 
-  input::placeholder{
-    font-size: 15px;
-    letter-spacing: 1.2;
-  }
-
    .formy .forget-password {
     font-size: 12px;
-  }
-
-   .formy{
-    width: 100%;
-    display: flex;
-    margin-top: 5px;
-  }
-
-  .formy div:last-child {
-    text-align: right;
   }
 
   .checkbox {
@@ -540,18 +515,6 @@ export default {
     text-align: center;
   }
 
-  .first{
-    display: block;
-  }
-
-  .second{
-    display: none;
-  }
-
-  .third {
-    display: none;
-  }
-
   .bottom-right {
     width: 100%;
     text-align: right;
@@ -562,13 +525,6 @@ export default {
   .bottom {
     margin-top: 2rem;
     width: 100%;
-  }
-
-  .service {
-    color: #5007E0;
-    font-size: 15px;
-    font-weight: 500;
-    margin-top: 5px;
   }
 
   .photo-box {

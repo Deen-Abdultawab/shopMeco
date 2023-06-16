@@ -13,9 +13,15 @@
     <section class="overlay" :class="{show: showNav}">
       <div class="sidebar">
         <ul class="nav-links">
-          <li><a href="/">Home</a></li>
-          <li><a href="about">About</a></li>
-          <li><a href="contact">Contact</a></li>
+          <li @click="showNav = false">
+            <router-link :to="{ name: 'index' }">Home</router-link>
+          </li>
+          <li @click="showNav = false">
+            <router-link :to="{ name: 'About' }">About</router-link>
+          </li>
+          <li @click="showNav = false">
+            <router-link :to="{ name: 'Contact' }">Contact</router-link>
+          </li>
         </ul>
         <div class="user-btns">
           <button class="login-btn btn">
@@ -42,13 +48,6 @@
 
 <style scoped>
 
-
-  * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-
   .nav {
     z-index: 99999;
   }
@@ -57,10 +56,12 @@
     width: 200px;
   }
   .mobile-navBar {
+      width: 92vw;
+      margin: 0 auto;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 0.5rem 2rem;
+      padding: 1.5rem 0;
   }
 
   .hamburger {
@@ -120,6 +121,8 @@
     background: #26046A;
     transform: translateX(100%);
     transition: all 0.5s linear;
+    display: grid;
+    grid-template-rows: 1fr auto;
   }
 
   .show .sidebar {
@@ -127,7 +130,7 @@
   }
 
   .nav-links {
-    margin-top: 10rem;
+    margin-top: 7rem;
     display: flex;
     flex-direction: column;
     gap: 2rem;
@@ -138,6 +141,9 @@
     cursor: pointer;
     transition: all 0.3s linear;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    max-width: 200px;
+    border-radius: 0.5rem;
+    padding: 0.3rem;
   }
 
   .nav-links li:hover {
@@ -147,7 +153,7 @@
   li a {
     color: white ;
     font-weight: bold;
-    font-size: 2rem;
+    font-size: 1.5rem;
     letter-spacing: 1px;
   }
 
@@ -156,8 +162,8 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 3rem;
-    margin-top: 5rem;
+    gap: 2rem;
+    margin-bottom: 2rem;
   }
 
   .btn {

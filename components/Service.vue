@@ -109,13 +109,7 @@ export default {
 @import url('https://fonts.googleapis.com/css2?family=Fruktur&family=Inter:wght@100;200;300;400;600;700;800&family=Licorice&display=swap');
 @import url('http://fonts.cdnfonts.com/css/sofia-pro');
 
-*, 
-    ::before, 
-    ::after {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
+
 
 h2{
     font-family: 'Sofia Pro';
@@ -172,6 +166,8 @@ img {
     display: grid;
     place-items: center;
     padding: 2rem;
+    top: 2rem;
+    position: relative;
 }
 
 .container {
@@ -200,7 +196,7 @@ img {
 }
 
 .article {
-    max-width: 100%;
+    width: 100%;
     height: 100%; 
     padding: 30px;
     display: flex;
@@ -261,12 +257,15 @@ img {
     .article1 img {
         object-fit: fill;
     }
+
+    h1 {
+        padding-bottom: 0;
+    }
 }
 
 @media only screen and (max-width: 800px) {
 
     .contain1 {
-        padding: 2.5rem;
         margin-bottom: 4rem;
     }
 
@@ -312,6 +311,7 @@ img {
  h1 {
     font-size: 30px;  
  }
+
 
 }
 </style>
