@@ -1,17 +1,17 @@
-export const Brand = () => import('../..\\components\\Brand.vue' /* webpackChunkName: "components/brand" */).then(c => wrapFunctional(c.default || c))
-export const DesktopNav = () => import('../..\\components\\DesktopNav.vue' /* webpackChunkName: "components/desktop-nav" */).then(c => wrapFunctional(c.default || c))
-export const DetailCarousel = () => import('../..\\components\\DetailCarousel.vue' /* webpackChunkName: "components/detail-carousel" */).then(c => wrapFunctional(c.default || c))
-export const Footer = () => import('../..\\components\\Footer.vue' /* webpackChunkName: "components/footer" */).then(c => wrapFunctional(c.default || c))
-export const HomeCarousel = () => import('../..\\components\\HomeCarousel.vue' /* webpackChunkName: "components/home-carousel" */).then(c => wrapFunctional(c.default || c))
-export const HomeService = () => import('../..\\components\\HomeService.vue' /* webpackChunkName: "components/home-service" */).then(c => wrapFunctional(c.default || c))
-export const Mission = () => import('../..\\components\\Mission.vue' /* webpackChunkName: "components/mission" */).then(c => wrapFunctional(c.default || c))
-export const Navbar = () => import('../..\\components\\Navbar.vue' /* webpackChunkName: "components/navbar" */).then(c => wrapFunctional(c.default || c))
-export const SelectService = () => import('../..\\components\\SelectService.vue' /* webpackChunkName: "components/select-service" */).then(c => wrapFunctional(c.default || c))
-export const Service = () => import('../..\\components\\Service.vue' /* webpackChunkName: "components/service" */).then(c => wrapFunctional(c.default || c))
-export const SideCarousel = () => import('../..\\components\\SideCarousel.vue' /* webpackChunkName: "components/side-carousel" */).then(c => wrapFunctional(c.default || c))
-export const Slider = () => import('../..\\components\\Slider.vue' /* webpackChunkName: "components/slider" */).then(c => wrapFunctional(c.default || c))
-export const Technisians = () => import('../..\\components\\Technisians.vue' /* webpackChunkName: "components/technisians" */).then(c => wrapFunctional(c.default || c))
-export const Testimony = () => import('../..\\components\\Testimony.vue' /* webpackChunkName: "components/testimony" */).then(c => wrapFunctional(c.default || c))
+export { default as Brand } from '../..\\components\\Brand.vue'
+export { default as DesktopNav } from '../..\\components\\DesktopNav.vue'
+export { default as DetailCarousel } from '../..\\components\\DetailCarousel.vue'
+export { default as Footer } from '../..\\components\\Footer.vue'
+export { default as HomeCarousel } from '../..\\components\\HomeCarousel.vue'
+export { default as HomeService } from '../..\\components\\HomeService.vue'
+export { default as Mission } from '../..\\components\\Mission.vue'
+export { default as Navbar } from '../..\\components\\Navbar.vue'
+export { default as SelectService } from '../..\\components\\SelectService.vue'
+export { default as Service } from '../..\\components\\Service.vue'
+export { default as SideCarousel } from '../..\\components\\SideCarousel.vue'
+export { default as Slider } from '../..\\components\\Slider.vue'
+export { default as Technisians } from '../..\\components\\Technisians.vue'
+export { default as Testimony } from '../..\\components\\Testimony.vue'
 
 // nuxt/nuxt.js#8607
 function wrapFunctional(options) {
