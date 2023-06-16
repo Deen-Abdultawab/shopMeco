@@ -1,0 +1,44 @@
+{
+  "Brand": {
+    "description": "Auto imported from components/Brand.vue"
+  },
+  "DesktopNav": {
+    "description": "Auto imported from components/DesktopNav.vue"
+  },
+  "DetailCarousel": {
+    "description": "Auto imported from components/DetailCarousel.vue"
+  },
+  "Footer": {
+    "description": "Auto imported from components/Footer.vue"
+  },
+  "HomeCarousel": {
+    "description": "Auto imported from components/HomeCarousel.vue"
+  },
+  "HomeService": {
+    "description": "Auto imported from components/HomeService.vue"
+  },
+  "Mission": {
+    "description": "Auto imported from components/Mission.vue"
+  },
+  "Navbar": {
+    "description": "Auto imported from components/Navbar.vue"
+  },
+  "SelectService": {
+    "description": "Auto imported from components/SelectService.vue"
+  },
+  "Service": {
+    "description": "Auto imported from components/Service.vue"
+  },
+  "SideCarousel": {
+    "description": "Auto imported from components/SideCarousel.vue"
+  },
+  "Slider": {
+    "description": "Auto imported from components/Slider.vue"
+  },
+  "Technisians": {
+    "description": "Auto imported from components/Technisians.vue"
+  },
+  "Testimony": {
+    "description": "Auto imported from components/Testimony.vue"
+  }
+}
