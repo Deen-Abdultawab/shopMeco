@@ -3,43 +3,37 @@
     "name": "About",
     "path": "/About",
     "component": "C:\\\\Users\\\\abdul\\\\OneDrive\\\\Desktop\\\\ShopMecho\\\\pages\\\\About.vue",
-    "chunkName": "pages/About",
-    "_name": "_a8cca9b8"
+    "chunkName": "pages/About"
   },
   {
     "name": "Business",
     "path": "/Business",
     "component": "C:\\\\Users\\\\abdul\\\\OneDrive\\\\Desktop\\\\ShopMecho\\\\pages\\\\Business.vue",
-    "chunkName": "pages/Business",
-    "_name": "_2b0c0a79"
+    "chunkName": "pages/Business"
   },
   {
     "name": "Carousel",
     "path": "/Carousel",
     "component": "C:\\\\Users\\\\abdul\\\\OneDrive\\\\Desktop\\\\ShopMecho\\\\pages\\\\Carousel.vue",
-    "chunkName": "pages/Carousel",
-    "_name": "_8cac47ce"
+    "chunkName": "pages/Carousel"
   },
   {
     "name": "Contact",
     "path": "/Contact",
     "component": "C:\\\\Users\\\\abdul\\\\OneDrive\\\\Desktop\\\\ShopMecho\\\\pages\\\\Contact.vue",
-    "chunkName": "pages/Contact",
-    "_name": "_2e584677"
+    "chunkName": "pages/Contact"
   },
   {
     "name": "Individual",
     "path": "/Individual",
     "component": "C:\\\\Users\\\\abdul\\\\OneDrive\\\\Desktop\\\\ShopMecho\\\\pages\\\\Individual.vue",
-    "chunkName": "pages/Individual",
-    "_name": "_69985492"
+    "chunkName": "pages/Individual"
   },
   {
     "name": "Login",
     "path": "/Login",
     "component": "C:\\\\Users\\\\abdul\\\\OneDrive\\\\Desktop\\\\ShopMecho\\\\pages\\\\Login.vue",
-    "chunkName": "pages/Login",
-    "_name": "_d60dae00"
+    "chunkName": "pages/Login"
   },
   {
     "name": "Sidebar",
@@ -51,52 +45,44 @@
         "name": "Sidebar-Booking",
         "path": "Booking",
         "component": "C:\\\\Users\\\\abdul\\\\OneDrive\\\\Desktop\\\\ShopMecho\\\\pages\\\\Sidebar\\\\Booking.vue",
-        "chunkName": "pages/Sidebar/Booking",
-        "_name": "_405f37d4"
+        "chunkName": "pages/Sidebar/Booking"
       },
       {
         "name": "Sidebar-Details",
         "path": "Details",
         "component": "C:\\\\Users\\\\abdul\\\\OneDrive\\\\Desktop\\\\ShopMecho\\\\pages\\\\Sidebar\\\\Details.vue",
-        "chunkName": "pages/Sidebar/Details",
-        "_name": "_5285317f"
+        "chunkName": "pages/Sidebar/Details"
       },
       {
         "name": "Sidebar-Messages",
         "path": "Messages",
         "component": "C:\\\\Users\\\\abdul\\\\OneDrive\\\\Desktop\\\\ShopMecho\\\\pages\\\\Sidebar\\\\Messages.vue",
-        "chunkName": "pages/Sidebar/Messages",
-        "_name": "_602564df"
+        "chunkName": "pages/Sidebar/Messages"
       },
       {
         "name": "Sidebar-Services",
         "path": "Services",
         "component": "C:\\\\Users\\\\abdul\\\\OneDrive\\\\Desktop\\\\ShopMecho\\\\pages\\\\Sidebar\\\\Services.vue",
-        "chunkName": "pages/Sidebar/Services",
-        "_name": "_7b78ca1e"
+        "chunkName": "pages/Sidebar/Services"
       },
       {
         "name": "Sidebar-id",
         "path": ":id?",
         "component": "C:\\\\Users\\\\abdul\\\\OneDrive\\\\Desktop\\\\ShopMecho\\\\pages\\\\Sidebar\\\\_id.vue",
-        "chunkName": "pages/Sidebar/_id",
-        "_name": "_05fb3797"
+        "chunkName": "pages/Sidebar/_id"
       }
-    ],
-    "_name": "_136d2fb3"
+    ]
   },
   {
     "name": "Started",
     "path": "/Started",
     "component": "C:\\\\Users\\\\abdul\\\\OneDrive\\\\Desktop\\\\ShopMecho\\\\pages\\\\Started.vue",
-    "chunkName": "pages/Started",
-    "_name": "_4b156b50"
+    "chunkName": "pages/Started"
   },
   {
     "name": "index",
     "path": "/",
     "component": "C:\\\\Users\\\\abdul\\\\OneDrive\\\\Desktop\\\\ShopMecho\\\\pages\\\\index.vue",
-    "chunkName": "pages/index",
-    "_name": "_53df6609"
+    "chunkName": "pages/index"
   }
 ]
